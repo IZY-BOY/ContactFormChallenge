@@ -61,14 +61,14 @@ body{
 fieldset{
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    /* flex: 1;  */
     background-color: var(--White);
     border-radius: 10px;
     border: none;
-    width: 90%;
-    max-width: 473px;
+    /* width: 90%; */
+    width: 473px;
     /* height: auto; */
-    margin: 85px auto;
+    margin: 80px auto;
     padding: 30px;
 }
 
@@ -89,7 +89,7 @@ label{
 
     /* Input */
 
-input[type="text"], input[type="email"], textarea, .radio{
+input[type="text"], input[type="email"], textarea{
     border: 1px solid var(--Grey-500-medium);
     border-radius: 5px;
     width: 100%;
@@ -103,7 +103,7 @@ input[type="text"], input[type="email"]{
     margin-bottom: 20px;
 }
 
-input:hover, input[type="radio"]{
+input:hover{
     cursor: grabbing;
 }
 
@@ -112,6 +112,7 @@ input:hover, input[type="radio"]{
     /* width: 100%; */
     /* height: 36px; */
     /* margin-bottom: 20px;
+    .radio
 }*/
 
     /* Name */
@@ -123,7 +124,7 @@ input:hover, input[type="radio"]{
     gap: 10px;
     /* margin-bottom: 20px; */
     /* justify-content: space-between; */
-    /* width: 100%; */
+    width: 100%;
 }
 
 .name{
@@ -150,6 +151,7 @@ textarea{
     column-gap: .7em;
     margin-bottom: 20px;
     flex-flow: row wrap;        
+    row-gap: 10px;
     /* flex: 1 100%; */
     /* justify-content: space-between; */
     /* flex-wrap: nowrap; */
@@ -163,12 +165,14 @@ textarea{
     height: 36px;
     padding-left: 20px;
     flex: 1;
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: 5px;
     /* width: 100%; */
     /* border: 2px solid greenyellow; */
 }
 
 .Query{
-    flex-basis: 100%;
+    flex: 0 0 100%;
 }
 
 /* .radio-1{
@@ -197,7 +201,7 @@ textarea{
     /* Button */
 
 button {
-    width: 100%;
+    width: auto;
     height: 38px;
     border: 1px solid var(--Green-600-medium);
     border-radius: 5px;
@@ -249,4 +253,51 @@ img{
 }*/
 
 
+@media  screen and (max-width: 700px) {
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        /* margin: 0px auto; */
+    }
 
+    .name-container {
+        border: 2px solid blue;
+        display: inline-block;
+        /* width: 100%; */
+    }
+
+    .radio-container {
+        border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .radio {
+        display: flex;
+        flex-direction: row;
+        /* box-sizing: content-box; */
+        /* align-items:; */
+        /* width: 100%; */
+        /* gap: 5px; */
+        height: 36px;
+        /* padding-left: 20px; */
+        /* flex: 0 1; */
+        /* border: 2px solid blue; */
+    }
+
+        textarea {
+            width: 200px;
+            /* max-width: 456px; */
+            /* max-height: 61px; */
+            /* line-height: 1.5; */
+            /* padding: 10px; */
+            /* margin-bottom: 20px; */
+        }
+
+        form{
+            width: 90%;
+            margin: 50px auto;
+        }
+}
