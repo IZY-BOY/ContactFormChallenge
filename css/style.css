@@ -166,31 +166,49 @@ button {
     /*---------------- Hover state */
 
 /*-------------- cursor class */
+
 .cursor{
     cursor: pointer;
 }
 
 /*--------------- input */
+
 input:hover{
     cursor: pointer;
     border: 2px solid var(--Green-600-medium);
 }
 
 /*---------------- textarea */
+
 textarea:hover{
     cursor: pointer;
     border: 2px solid var(--Green-600-medium);
 }
 
 /*---------------- radio */
+
 .radio:hover{
     border: 2px solid var(--Green-600-medium);
 }
 
-    /*------------------ Focus state */
+    /*------------------ Focus and active state */
+
+/*--------------- input */
 
 input:focus{
     border: 2px solid var(--Green-600-medium);
+}
+
+/*---------------- textarea */
+
+textarea:focus{
+    border: 2px solid var(--Green-600-medium);
+}
+
+/*---------------- radio */
+
+.radio:active{
+    background-color: var(--Green-200-lighter);
 }
 
 
