@@ -94,6 +94,7 @@ input[type="text"], input[type="email"], textarea, .radio{
     border-radius: 5px;
     width: 100%;
     margin-top: 10px;
+    
 }
 
 input[type="text"], input[type="email"]{
@@ -147,7 +148,7 @@ textarea{
     column-gap: .7em;
     margin-bottom: 20px;
     flex-flow: row wrap;        
-    row-gap: 10px;
+    /* row-gap: 0px; */
     /* flex: 1 100%; */
     /* justify-content: space-between; */
     /* flex-wrap: nowrap; */
@@ -274,22 +275,22 @@ img{
     .radio-container {
         /* border: 2px solid blue; */
         display: flex;
-        height: 100px;
+        /* height: 150px; */
         flex-direction: column;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
+        flex-shrink: 1;
     }
     
     .radio{
         /* flex-direction: row; */
         /* flex: 1; */
-        j
         box-sizing: content-box;
         /* align-items:; */
         /* width: 100%; */
-        /* gap: 5px; */
+        gap: 15px;
         /* height: px; */
         padding-left: 0px;
-        /* flex: 0 1; */
+        flex: 0 1 0;
         /* border: 2px solid blue; */
     }
 
@@ -297,8 +298,12 @@ img{
         width: fit-content;
     }
 
+    input[type="radio"]{
+        margin: 13px 0 13px 20px;
+    }
+
         textarea {
-            /* width: 200px; */
+            width: 200px;
             /* max-width: 456px; */
             /* max-height: 61px; */
             /* line-height: 1.5; */
@@ -309,18 +314,30 @@ img{
 
     /* Hover state */
 
-input:hover, .radio:hover, button:hover, .lQuery:hover{
+/* input:hover, .radio:hover, button:hover, textarea:hover{
     cursor: pointer;
     border: 2px solid green;
-}
+    background-color: rgba(0, 128, 126, 0.5);
+} */
+
+/* .lQuery:hover{
+    cursor: pointer;
+} */
+
 
 /* Focus state */
 
-button:focus{
+
+
+/* .radio :active{
+    background-color: green;
+} */
+
+/* button :focus{
     border: 1px solid green;
-}
-
-
+    }
+     */
+    
 /* Error state */
 
 
