@@ -89,7 +89,7 @@ label{
 
     /* Input */
 
-input[type="text"], input[type="email"], textarea{
+input[type="text"], input[type="email"], textarea, .radio{
     border: 1px solid var(--Grey-500-medium);
     border-radius: 5px;
     width: 100%;
@@ -101,10 +101,6 @@ input[type="text"], input[type="email"]{
     /* width: 100%; */
     height: 36px;
     margin-bottom: 20px;
-}
-
-input:hover{
-    cursor: grabbing;
 }
 
 /* input[type="email"]{
@@ -124,7 +120,7 @@ input:hover{
     gap: 10px;
     /* margin-bottom: 20px; */
     /* justify-content: space-between; */
-    width: 100%;
+    /* width: 100%; */
 }
 
 .name{
@@ -171,9 +167,9 @@ textarea{
     /* border: 2px solid greenyellow; */
 }
 
-.Query{
-    flex: 0 0 100%;
-}
+/* .Query{
+    flex-basis: 100%;
+} */
 
 /* .radio-1{
     order: 2;
@@ -252,52 +248,83 @@ img{
     margin-left: 0;
 }*/
 
+    /* Mobile view */
 
-@media  screen and (max-width: 700px) {
+@media (max-width: 500px) {
+
+    body{
+        display: grid;
+        place-items: center;
+    }
+
     fieldset{
         display: flex;
         flex-direction: column;
-        width: 90%;
-        margin: 0px auto;
+        max-width: 80%;
+        margin: 30px auto;
+        min-width: 200px;
     }
 
     .name-container {
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         display: inline-block;
         /* width: 100%; */
     }
 
     .radio-container {
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         display: flex;
+        height: 100px;
         flex-direction: column;
         margin-bottom: 20px;
     }
     
-    .radio {
-        display: flex;
-        flex-direction: row;
-        /* box-sizing: content-box; */
+    .radio{
+        /* flex-direction: row; */
+        /* flex: 1; */
+        j
+        box-sizing: content-box;
         /* align-items:; */
         /* width: 100%; */
         /* gap: 5px; */
-        height: 36px;
-        /* padding-left: 20px; */
+        /* height: px; */
+        padding-left: 0px;
         /* flex: 0 1; */
         /* border: 2px solid blue; */
     }
 
+    .lQuery{
+        width: fit-content;
+    }
+
         textarea {
-            width: 200px;
+            /* width: 200px; */
             /* max-width: 456px; */
             /* max-height: 61px; */
             /* line-height: 1.5; */
             /* padding: 10px; */
             /* margin-bottom: 20px; */
         }
-
-        form{
-            width: 90%;
-            margin: 50px auto;
-        }
 }
+
+    /* Hover state */
+
+input:hover, .radio:hover, button:hover, .lQuery:hover{
+    cursor: pointer;
+    border: 2px solid green;
+}
+
+/* Focus state */
+
+button:focus{
+    border: 1px solid green;
+}
+
+
+/* Error state */
+
+
+/* Success state */
+
+
+/* focus state */
