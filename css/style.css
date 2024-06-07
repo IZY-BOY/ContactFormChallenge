@@ -22,17 +22,6 @@
     --body-text-font-size: 16px;
     --body-text-font-family: "Karla", sans-serif;
 }
-    /* Font class style */
-
-.karla-bold {
-    font-family: --body-text-font-family;
-    font-weight: 700;
-}
-
-.karla-light {
-    font-family: var(--body-text-font-family);
-    font-weight: 400;
-}
 
     /* custome style */
 
@@ -67,7 +56,7 @@ fieldset{
     /* width: 90%; */
     width: 500px;
     /* height: auto; */
-    margin: 85px auto;
+    margin: 100px auto;
     padding: 30px;
 }
 
@@ -94,80 +83,52 @@ input[type="text"], input[type="email"], textarea, .radio{
     border: 1px solid var(--Grey-500-medium);
     border-radius: 5px;
     width: 100%;
-    margin-top: 10px;
-    /* font-family: var(--body-text-font-family); */
-    margin-bottom: 20px;
-    
+    margin-top: 10px;    
 }
 
 input[type="text"], input[type="email"]{
-    /* width: 226px; */
-    /* width: 100%; */
     height: 36px;
+    margin-bottom: 20px;
 }
-
-/* input[type="email"]{
-    /* width: 470px; */
-    /* width: 100%; */
-    /* height: 36px; */
-    /* margin-bottom: 20px;
-    .radio
-}*/
 
     /* Name */
 
 .name-container{
-    /* border: 2px solid blue; */
     display: flex;
     flex-flow: row nowrap;
-    gap: 10px;
-    /* margin-bottom: 20px; */
-    /* justify-content: space-between; */
-    /* width: 100%; */
+    column-gap: 10px;
 }
 
 .name{
     /* border: 2px solid red; */
-    width: 100%;
+    /* width: 100%; */
+    /* border: 2px solid black; */
 }
 
     /* Textarea */
 
 textarea{
-    /* width: 100%; */
-    /* max-width: 456px; */
-    /* max-height: 61px; */
     line-height: 1.5;
     padding: 10px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 
     /* Radio */
 
 .radio-container{
-    /* border: 2px solid blue; */
     display: flex;
-    column-gap: .7em;
-    /* margin-bottom: 25px; */
+    column-gap: .6em;
+    margin-bottom: 20px;
     flex-flow: row wrap;        
-    /* row-gap: 0px; */
-    /* flex: 1 100%; */
-    /* justify-content: space-between; */
-    /* flex-wrap: nowrap; */
-    /* width: 100%; */
 }
 
 .radio{
     display: flex;
     align-items: center;
-    gap: 5px;
+    column-gap: 10px;
     height: 36px;
-    padding-left: 20px;
+    padding-left: 25px;
     flex: 1;
-    border: 1px solid var(--Grey-500-medium);
-    border-radius: 5px;
-    /* width: 100%; */
-    /* border: 2px solid greenyellow; */
 }
 
 /* .Query{
@@ -187,7 +148,7 @@ textarea{
 .checkbox-container{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
     /* Star */
@@ -256,66 +217,29 @@ img{
 @media (max-width: 500px) {
 
     body{
-        display: flex;
         flex-direction: column;
-        flex: 1;
-        place-items: center;
     }
 
     fieldset{
-        /* width: 300px; */
         display: flex;
         flex-direction: column;
-        width: 80%;
-        margin: 30px auto;
+        width: 90%;
+        margin-top: 30px;
         min-width: 250px;
-        /* font-size: 15px; */
-
     }
 
     .name-container {
-        /* border: 2px solid blue; */
-        display: inline-block;
-        /* width: 100%; */
-    }
-
-    .radio-container {
-        /* border: 2px solid blue; */
-        display: flex;
-        /* height: 150px; */
         flex-direction: column;
-        /* margin-bottom: 20px; */
-        /* flex-shrink: 1; */
+        /* border: 2px solid blue; */
     }
     
     .radio{
-        /* flex-direction: row; */
-        /* flex: 1; */
-        box-sizing: content-box;
-        /* align-items:; */
-        /* width: 100%; */
-        gap: 15px;
-        /* height: px; */
-        padding-left: 0px;
-        flex: 0 1 0;
-        /* border: 2px solid blue; */
+        flex-basis: 100%;
     }
 
-    .lQuery{
-        width: fit-content;
+    textarea {
+        height: 200px;
     }
-
-    input[type="radio"]{
-        margin: 13px 0 13px 20px;
-    }
-
-        textarea {
-            /* max-width: 456px; */
-            /* max-height: 61px; */
-            /* line-height: 1.5; */
-            /* padding: 10px; */
-            /* margin-bottom: 20px; */
-        }
 }
 
     /* Hover state */
