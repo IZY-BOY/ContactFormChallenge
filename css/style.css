@@ -1,66 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit&family=Young+Serif&display=swap');
 
-    /* root style */
+    /*-------------------- root style */
 
 :root{
-    /* Colors */
+    /*---------------------- Colors */
 
-    /* Primary */
+    /*--------------------- Primary */
 
     --Green-200-lighter: hsl(148, 38%, 91%);
     --Green-600-medium: hsl(169, 82%, 27%);
     --Red: hsl(0, 66%, 54%);
 
-    /* Neutral */
+    /*----------------------- Neutral */
 
     --White: hsl(0, 0%, 100%);
     --Grey-500-medium: hsl(186, 15%, 59%);
     --Grey-900-darker: hsl(187, 24%, 22%);
 
-    /* Typography */
+    /*----------------------- Typography */
 
     --body-text-font-size: 16px;
     --body-text-font-family: "Karla", sans-serif;
 }
 
-    /* custome style */
+    /*----------------------- custome style */
 
-    /* General style */
+    /*----------------------- General style */
 
 *{
     margin: 0;
     padding: 0;
     font-family: var(--body-text-font-family);
     box-sizing: border-box;
+    outline: none;
 }
 
-    /* Desktop view */
+    /*-------------------- Desktop view */
 
-    /* Body */
+    /*-------------------- Body */
 
 body{
     background: var(--Green-200-lighter) !important;
     box-sizing: border-box;
 }
 
-    /* Fieldset */
+    /*---------------------- Fieldset */
 
 fieldset{
     display: flex;
     flex-direction: column;
     font-family: var(--body-text-font-family);
-    /* flex: 1;  */
     background-color: var(--White);
     border-radius: 10px;
     border: none;
-    /* width: 90%; */
-    width: 500px;
-    /* height: auto; */
+    width: 535px;
     margin: 100px auto;
     padding: 30px;
 }
 
-    /* Form Heading*/
+    /*------------------- Form Heading*/
 
 h1{
     margin-bottom: 25px;
@@ -69,7 +67,7 @@ h1{
     color: var(--Grey-900-darker);
 }
 
-    /* Label */
+    /*---------------------- Label */
 
 label{
     font-size: var(--body-text-font-size) !important;
@@ -77,21 +75,22 @@ label{
     color: var(--Grey-900-darker);
 }
 
-    /* Input */
+    /*--------------------- Input */
 
 input[type="text"], input[type="email"], textarea, .radio{
     border: 1px solid var(--Grey-500-medium);
     border-radius: 5px;
     width: 100%;
-    margin-top: 10px;    
+    margin-top: 10px;
+    padding: 20px;   
 }
 
 input[type="text"], input[type="email"]{
-    height: 36px;
+    height: 30px;
     margin-bottom: 20px;
 }
 
-    /* Name */
+    /*-------------------- Name */
 
 .name-container{
     display: flex;
@@ -99,21 +98,15 @@ input[type="text"], input[type="email"]{
     column-gap: 10px;
 }
 
-.name{
-    /* border: 2px solid red; */
-    /* width: 100%; */
-    /* border: 2px solid black; */
-}
-
-    /* Textarea */
+    /*-------------------- Textarea */
 
 textarea{
     line-height: 1.5;
-    padding: 10px;
+    /* padding: 20px; */
     margin-bottom: 20px;
 }
 
-    /* Radio */
+    /*------------------ Radio */
 
 .radio-container{
     display: flex;
@@ -131,90 +124,79 @@ textarea{
     flex: 1;
 }
 
-/* .Query{
-    flex-basis: 100%;
-} */
-
-/* .radio-1{
-    order: 2;
-}
-
-.radio-2{
-    order: 3;
-} */
-
-    /* Check box */
+    /*----------------- Check box */
 
 .checkbox-container{
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-bottom: 20px;
 }
 
-    /* Star */
+    /*----------------- Star */
 
 .required{
     color: var(--Green-600-medium);
     margin-left: .5em;
 }
 
-    /* Button */
+    /*------------------ Button */
 
 button {
-    width: auto;
-    height: 38px;
-    border: 1px solid var(--Green-600-medium);
+    height: 36px;
+    border: none;
     border-radius: 5px;
     background-color: var(--Green-600-medium);
     color: var(--White);
-    margin-top: 30px;
 }
 
-/* button:focus {
-    border: 3px solid var(--Green-600-medium);
-    border-radius: 5px;
-    background-color: var(--Green-200-lighter);
-    color: var(--White);
-    margin-top: 30px;
-} */
+    /*------------------ Checkbox and radio icon */
 
-
-img{
+.icon{
     width: 13px;
     position: absolute;
     visibility: collapse;
 }
 
-.unchecked-box{
+.unchecked-icon{
     width: 12px;
+    border: 1px solid black;
 }
 
-/* .checked-box{
+    /*---------------- Hover state */
 
-} */
-
-/* input:first-of-type + label, input:nth-child(2) + label{
-    display: inline-block
-} */
-
-/* .unchecked-box{
-    visibility: visible;
-    position: relative;
+/*-------------- cursor class */
+.cursor{
+    cursor: pointer;
 }
 
-.name{
-    display: inline-flex;
-    margin-left: 18.5px;
-    width: 48%;
+/*--------------- input */
+input:hover{
+    cursor: pointer;
+    border: 2px solid var(--Green-600-medium);
 }
 
-.name:first-of-type{
-    margin-left: 0;
-}*/
+/*---------------- textarea */
+textarea:hover{
+    cursor: pointer;
+    border: 2px solid var(--Green-600-medium);
+}
+
+/*---------------- radio */
+.radio:hover{
+    border: 2px solid var(--Green-600-medium);
+}
+
+    /*------------------ Focus state */
+
+input:focus{
+    border: 2px solid var(--Green-600-medium);
+}
+
 
     /* Mobile view */
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
     body{
         flex-direction: column;
@@ -225,7 +207,7 @@ img{
         flex-direction: column;
         width: 90%;
         margin-top: 30px;
-        min-width: 250px;
+        min-width: 280px;
     }
 
     .name-container {
@@ -242,20 +224,7 @@ img{
     }
 }
 
-    /* Hover state */
 
-/* input:hover, .radio:hover, button:hover, textarea:hover{
-    cursor: pointer;
-    border: 2px solid green;
-    background-color: rgba(0, 128, 126, 0.5);
-} */
-
-/* .lQuery:hover{
-    cursor: pointer;
-} */
-
-
-/* Focus state */
 
 
 

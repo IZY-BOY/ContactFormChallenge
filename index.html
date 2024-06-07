@@ -26,31 +26,31 @@
         <div class="name-container">
           <div class="name">
             <label for="fname">First Name<span class="required">*</span></label>
-            <input type="text" id="fname" name="fname" required>
+            <input class="cursor" type="text" id="fname" name="fname" required>
           </div>
           
           <div class="name">
             <label for="lname">Last Name<span class="required">*</span></label>
-            <input type="text" id="lname" name="lname" required>
+            <input class="cursor" type="text" id="lname" name="lname" required>
           </div>
         </div>
 
         <label for="email">Email Address<span class="required">*</span></label>
-        <input type="email" id="email" name="email" required>
+        <input class="cursor" type="email" id="email" name="email" required>
 
         <label class="Query" for="Query">Query Type<span class="required">*</span></label>
         <div class="radio-container">
 
-          <div class="radio radio-1">
-            <img src="assets/images/icon-radio-selected.svg" alt="">
+          <div class="radio radio-1 cursor">
+            <img class="icon" src="assets/images/icon-radio-selected.svg" alt="">
             <input required type="radio" id="GeneralEnquiry" name="Query">
-            <label class="lQuery" for="GeneralEnquiry">General Enquiry</label>
+            <label class="lQuery cursor" for="GeneralEnquiry">General Enquiry</label>
           </div>
 
-          <div class="radio radio-2">
-            <img src="assets/images/icon-radio-selected.svg" alt="">
+          <div class="radio radio-2 cursor">
+            <img class="icon" src="assets/images/icon-radio-selected.svg" alt="">
             <input required type="radio" id="SupportRequest" name="Query">
-            <label class="lQuery" for="SupportRequest">Support Request</label>
+            <label class="lQuery cursor" for="SupportRequest">Support Request</label>
           </div>
         </div>
 
@@ -58,12 +58,12 @@
         <textarea required rows="3" cols="65"></textarea>
 
         <div class="checkbox-container">
-          <img class="unchecked-box" src="assets/images/icon-success-check.svg" alt="" style="border: 1px solid black;">
-          <img class="checked-box" src="assets/images/icon-checkbox-check.svg" alt="">
+          <img class="unchecked-icon icon cursor" src="assets/images/icon-success-check.svg" alt="">
+          <img class="checked-icon icon cursor" src="assets/images/icon-checkbox-check.svg" alt="">
           <input type="checkbox" id="consent" name="consent" required>
-          <label for="consent">I consent to being contacted by the team<span class="required">*</span></label>
+          <label class="cursor" for="consent">I consent to being contacted by the team<span class="required">*</span></label>
         </div>
-        <button type="submit">Submit</button>
+        <button class="cursor" type="submit">Submit</button>
       </fieldset>
     </form>
   </main>
